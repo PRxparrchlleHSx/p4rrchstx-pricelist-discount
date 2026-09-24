@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#08080b">
+<title>DISCOUNT PRICELIST — PRX! P4RRCH H-STx!</title>
+<link rel="icon" type="image/png" href="https://files.catbox.moe/a502tu.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800;900&family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-touch-callout:none;-webkit-tap-highlight-color:transparent}
+input,textarea,select{-webkit-user-select:text!important;-moz-user-select:text!important;-ms-user-select:text!important;user-select:text!important}
+html{scroll-behavior:smooth;background:#050508}
+body{min-height:100vh;font-family:'Inter',sans-serif;color:#f5f5f7;background:transparent;line-height:1.6;overflow-x:hidden;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-touch-callout:none}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+img{display:block;max-width:100%}
+svg{flex:0 0 auto}
+::selection{background:transparent;color:inherit}
+::-moz-selection{background:transparent;color:inherit}
+
+:root{
+--bg:#050508;--bg2:#0a0a10;
+--panel:rgba(12,12,18,.55);--panel-strong:rgba(8,8,12,.88);
+--line:rgba(255,255,255,.14);--line-strong:rgba(255,255,255,.22);
+--text:#f5f5f7;--muted:#a8a8b2;--dim:#6c6c78;
+--red:#ff1f2e;--red-2:#ff5a63;--red-deep:#b3000a;
+--silver:#d4d6dc;--white:#fff;--gold:#ffd700;
+--shadow:0 24px 80px rgba(0,0,0,.55);
+--display:'Orbitron',sans-serif;--head:'Rajdhani',sans-serif;--body:'Inter',sans-serif;
+}
+
+#video-bg{position:fixed;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:-5;background:#050508;opacity:1}
+.video-shade{position:fixed;inset:0;z-index:-4;pointer-events:none;
+background:radial-gradient(circle at 50% 15%,rgba(255,31,46,.10),transparent 50%),
+linear-gradient(180deg,rgba(5,5,8,.20),rgba(5,5,8,.45) 55%,rgba(5,5,8,.70))}
+.video-noise{position:fixed;inset:0;z-index:-3;pointer-events:none;opacity:.04;
+background-image:radial-gradient(rgba(255,255,255,.8) .6px,transparent .6px);background-size:5px 5px}
+
+.lightning-bg{position:fixed;inset:0;z-index:-2;pointer-events:none;opacity:.15}
+.lightning-bg svg{width:100%;height:100%}
+.lightning-bg path{fill:none;stroke:#ff1f2e;stroke-width:1.5;filter:drop-shadow(0 0 8px #ff1f2e);animation:boltFlash 5s infinite}
+.lightning-bg path:nth-child(2){stroke:#fff;stroke-width:1;animation-delay:1.8s;filter:drop-shadow(0 0 6px #fff)}
+.lightning-bg path:nth-child(3){animation-delay:3.2s}
+@keyframes boltFlash{0%,85%,100%{opacity:0}88%{opacity:1}90%{opacity:.3}92%{opacity:1}94%{opacity:.4}}
+
+@keyframes glowPulse{0%,100%{box-shadow:0 0 20px rgba(255,31,46,.35),0 0 40px rgba(255,31,46,.15)}50%{box-shadow:0 0 30px rgba(255,31,46,.6),0 0 60px rgba(255,31,46,.25)}}
+@keyframes redFlash{0%,100%{text-shadow:0 0 12px rgba(255,31,46,.6),0 0 24px rgba(255,31,46,.3)}50%{text-shadow:0 0 20px rgba(255,31,46,1),0 0 40px rgba(255,31,46,.6)}}
+
+.container{width:min(1200px,calc(100% - 32px));margin:auto}
+
+.topbar{position:sticky;top:12px;z-index:30;width:min(1200px,calc(100% - 24px));margin:12px auto 0;padding:10px 14px;
+display:flex;align-items:center;justify-content:space-between;gap:12px;
+border:1px solid var(--line);border-radius:18px;background:rgba(8,8,12,.55);
+backdrop-filter:blur(20px) saturate(140%);-webkit-backdrop-filter:blur(20px) saturate(140%);
+box-shadow:var(--shadow),0 0 30px rgba(255,31,46,.12)}
+.brand{display:flex;align-items:center;gap:12px;min-width:0}
+.brand-mark{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;
+background:#0a0a10;border:1px solid rgba(255,31,46,.5);
+box-shadow:0 0 20px rgba(255,31,46,.5),inset 0 0 12px rgba(255,31,46,.2);
+overflow:hidden;flex:0 0 auto;animation:glowPulse 3s ease-in-out infinite}
+.brand-mark img{width:100%;height:100%;object-fit:contain;padding:4px}
+.brand-name{font-family:var(--display);font-size:1.05rem;letter-spacing:.5px;font-weight:800;
+background:linear-gradient(90deg,#fff 0%,#d4d6dc 40%,#ff5a63 100%);
+-webkit-background-clip:text;background-clip:text;color:transparent;white-space:nowrap;line-height:1.1}
+.brand-name small{display:block;font-size:.62rem;letter-spacing:1.5px;color:var(--red-2);font-weight:700;margin-top:2px;-webkit-text-fill-color:var(--red-2)}
+.nav-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+
+.nav-btn{position:relative;display:inline-flex;align-items:center;gap:6px;
+border:1px solid var(--line);background:rgba(255,255,255,.05);color:var(--text);
+padding:9px 14px;border-radius:11px;cursor:pointer;transition:.25s ease;font-weight:600;font-size:.85rem;overflow:visible;z-index:1;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.nav-btn svg{width:14px;height:14px;color:var(--red-2);position:relative;z-index:2;transition:.25s ease}
+.nav-btn span{position:relative;z-index:2}
+.nav-btn::before{content:"";position:absolute;left:-8px;top:-8px;right:-8px;bottom:-8px;border-radius:18px;
+background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60' preserveAspectRatio='none'><path d='M5 30 L30 12 L25 28 L55 8 L48 26 L90 5 L82 25 L125 3 L115 24 L160 8 L150 28 L195 15' stroke='%23ff1f2e' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/><path d='M8 45 L40 30 L34 46 L72 25 L65 44 L110 22 L102 42 L150 20 L140 40 L188 28' stroke='%23ff5a63' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+background-size:100% 100%;background-repeat:no-repeat;opacity:0;transition:opacity .3s ease;
+pointer-events:none;filter:drop-shadow(0 0 6px #ff1f2e) drop-shadow(0 0 12px rgba(255,31,46,.6));z-index:0}
+.nav-btn:hover{transform:translateY(-2px);border-color:rgba(255,31,46,.5);background:rgba(255,31,46,.12);box-shadow:0 0 20px rgba(255,31,46,.25)}
+.nav-btn:hover svg{color:#fff;filter:drop-shadow(0 0 6px #fff)}
+.nav-btn:hover::before{opacity:1;
+background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60' preserveAspectRatio='none'><path d='M5 30 L30 12 L25 28 L55 8 L48 26 L90 5 L82 25 L125 3 L115 24 L160 8 L150 28 L195 15' stroke='%23ffffff' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/><path d='M8 45 L40 30 L34 46 L72 25 L65 44 L110 22 L102 42 L150 20 L140 40 L188 28' stroke='%23d4d6dc' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+filter:drop-shadow(0 0 8px #ffffff) drop-shadow(0 0 16px rgba(255,255,255,.7));animation:navBoltFlash 1.2s ease-in-out infinite}
+.nav-btn:active::before{opacity:1;
+background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60' preserveAspectRatio='none'><path d='M5 30 L30 12 L25 28 L55 8 L48 26 L90 5 L82 25 L125 3 L115 24 L160 8 L150 28 L195 15' stroke='%23b3000a' stroke-width='2.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/><path d='M8 45 L40 30 L34 46 L72 25 L65 44 L110 22 L102 42 L150 20 L140 40 L188 28' stroke='%23ff1f2e' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+filter:drop-shadow(0 0 10px #ff1f2e) drop-shadow(0 0 20px rgba(179,0,10,.8));animation:navBoltFlash 1.5s ease-in-out infinite}
+@keyframes navBoltFlash{0%,100%{opacity:1}45%{opacity:.4}50%{opacity:1}55%{opacity:.3}60%{opacity:1}}
+
+.unmute-btn{position:fixed;bottom:20px;left:20px;z-index:9999;
+width:52px;height:52px;border-radius:50%;
+background:rgba(8,8,12,.85);border:1px solid rgba(255,31,46,.5);
+color:#ff5a63;cursor:pointer;display:grid;place-items:center;
+backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+box-shadow:0 0 20px rgba(255,31,46,.4),0 4px 15px rgba(0,0,0,.5);
+transition:.25s ease;padding:0}
+.unmute-btn:hover{background:rgba(255,31,46,.18);border-color:#ff1f2e;
+box-shadow:0 0 30px rgba(255,31,46,.7);transform:scale(1.1)}
+.unmute-btn:active{transform:scale(.95)}
+.unmute-btn svg{width:24px;height:24px;stroke:currentColor;fill:none;
+stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:.25s}
+.unmute-btn svg.icon-on{display:none}
+.unmute-btn.playing svg.icon-off{display:none}
+.unmute-btn.playing svg.icon-on{display:block;color:#ff1f2e;filter:drop-shadow(0 0 6px #ff1f2e)}
+.unmute-btn.playing{border-color:rgba(255,31,46,.8);box-shadow:0 0 25px rgba(255,31,46,.7),0 4px 15px rgba(0,0,0,.5);background:rgba(255,31,46,.12)}
+.unmute-btn.playing::after{content:"";position:absolute;inset:-4px;border-radius:50%;
+border:2px solid #ff1f2e;animation:audioPulse 1.6s ease-out infinite;pointer-events:none}
+@keyframes audioPulse{0%{transform:scale(.85);opacity:.9}100%{transform:scale(1.25);opacity:0}}
+@media (max-width:640px){.unmute-btn{width:46px;height:46px;bottom:16px;left:16px}
+.unmute-btn svg{width:20px;height:20px}}
+
+.hero{min-height:82vh;display:grid;place-items:center;text-align:center;padding:80px 0 60px;position:relative}
+.hero-inner{width:min(960px,100%)}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;
+border:1px solid rgba(255,31,46,.35);border-radius:999px;background:rgba(8,8,12,.55);
+backdrop-filter:blur(14px);color:#ffbcc0;font-size:.75rem;font-weight:800;
+letter-spacing:1.2px;text-transform:uppercase;box-shadow:0 0 20px rgba(255,31,46,.2)}
+.eyebrow svg{width:12px;height:12px;color:var(--red)}
+.hero-logo{width:min(320px,70%);margin:22px auto 8px;
+filter:drop-shadow(0 0 30px rgba(255,31,46,.55)) drop-shadow(0 0 60px rgba(255,31,46,.3));
+animation:glowPulse 3.5s ease-in-out infinite}
+.hero h1{margin:6px 0 14px;font-family:var(--display);font-size:clamp(2.2rem,6vw,4.5rem);
+line-height:.95;letter-spacing:-.5px;color:#fff;font-weight:900;
+text-shadow:0 0 30px rgba(255,31,46,.5),0 0 60px rgba(255,31,46,.3)}
+.hero h1 span{background:linear-gradient(90deg,var(--red),var(--red-2),#fff);
+-webkit-background-clip:text;background-clip:text;color:transparent;animation:redFlash 3s ease-in-out infinite}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;margin-top:6px;padding:8px 18px;
+border:1px dashed rgba(255,31,46,.5);border-radius:10px;
+font-family:var(--head);font-size:1.15rem;font-weight:700;letter-spacing:2px;
+color:#ffbcc0;text-transform:uppercase;background:rgba(8,8,12,.5);backdrop-filter:blur(8px)}
+.hero-tag svg{width:14px;height:14px;color:var(--gold);filter:drop-shadow(0 0 6px var(--gold))}
+.hero p{max-width:680px;margin:20px auto 0;color:#d0d0d8;font-size:clamp(.95rem,2vw,1.08rem);text-shadow:0 2px 8px rgba(0,0,0,.8)}
+.hero-actions{margin-top:30px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.discount-banner{display:inline-flex;align-items:center;gap:10px;margin:22px auto 0;padding:12px 22px;
+border:1px solid rgba(255,215,0,.5);border-radius:12px;
+background:linear-gradient(90deg,rgba(255,215,0,.12),rgba(255,31,46,.08));
+backdrop-filter:blur(10px);box-shadow:0 0 30px rgba(255,215,0,.2);
+font-family:var(--head);font-weight:700;font-size:1rem;letter-spacing:1.5px;
+color:#fff;text-transform:uppercase;animation:discountPulse 2.5s ease-in-out infinite}
+.discount-banner svg{width:20px;height:20px;color:var(--gold);filter:drop-shadow(0 0 8px var(--gold))}
+.discount-banner b{color:var(--gold);text-shadow:0 0 12px rgba(255,215,0,.8)}
+@keyframes discountPulse{0%,100%{box-shadow:0 0 20px rgba(255,215,0,.2)}50%{box-shadow:0 0 40px rgba(255,215,0,.5)}}
+
+.cta{display:inline-flex;align-items:center;justify-content:center;gap:8px;
+padding:13px 22px;border-radius:13px;border:1px solid var(--line);
+cursor:pointer;font-weight:800;transition:.25s ease;font-size:.95rem}
+.cta svg{width:16px;height:16px}
+.cta.primary{color:#fff;border-color:transparent;
+background:linear-gradient(135deg,var(--red-deep),var(--red),var(--red-2));
+box-shadow:0 12px 35px rgba(255,31,46,.45),0 0 25px rgba(255,31,46,.4);
+position:relative;overflow:hidden}
+.cta.primary::after{content:"";position:absolute;inset:0;
+background:linear-gradient(90deg,transparent,rgba(255,255,255,.35),transparent);
+transform:translateX(-100%);transition:.6s ease}
+.cta.primary:hover::after{transform:translateX(100%)}
+.cta.secondary{background:rgba(8,8,12,.7);backdrop-filter:blur(12px);color:#fff}
+.cta.secondary:hover{border-color:rgba(255,31,46,.6);box-shadow:0 0 25px rgba(255,31,46,.3)}
+.cta:hover{transform:translateY(-2px)}
+
+.section{padding:70px 0}
+.glass{border:1px solid var(--line);background:rgba(10,10,16,.45);
+backdrop-filter:blur(20px) saturate(135%);-webkit-backdrop-filter:blur(20px) saturate(135%);
+box-shadow:var(--shadow);border-radius:22px;position:relative;overflow:hidden}
+.glass::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;
+background:linear-gradient(90deg,transparent,rgba(255,31,46,.5),transparent)}
+.section-head{text-align:center;margin-bottom:28px}
+.section-kicker{color:var(--red-2);text-transform:uppercase;letter-spacing:2px;
+font-size:.7rem;font-weight:900;text-shadow:0 0 12px rgba(255,31,46,.6);
+display:inline-flex;align-items:center;gap:6px;justify-content:center}
+.section-kicker svg{width:12px;height:12px;color:var(--red)}
+.section-title{margin-top:6px;font-family:var(--display);font-weight:800;
+font-size:clamp(1.9rem,4.5vw,3rem);line-height:1;color:#fff;
+text-shadow:0 0 25px rgba(255,31,46,.5),0 2px 8px rgba(0,0,0,.9)}
+.section-sub{margin-top:10px;color:var(--muted);font-size:.92rem;text-shadow:0 2px 6px rgba(0,0,0,.8)}
+
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.feature{padding:22px;min-height:150px;display:flex;flex-direction:column;justify-content:space-between}
+.feature-icon{width:42px;height:42px;display:grid;place-items:center;border-radius:12px;
+background:rgba(255,31,46,.15);color:var(--red-2);
+border:1px solid rgba(255,31,46,.4);box-shadow:0 0 18px rgba(255,31,46,.25) inset}
+.feature-icon svg{width:22px;height:22px}
+.feature h3{margin-top:16px;font-size:1rem;color:#fff;font-family:var(--head);letter-spacing:.3px;font-weight:700;text-shadow:0 1px 4px rgba(0,0,0,.8)}
+.feature p{color:var(--muted);font-size:.85rem;margin-top:4px;text-shadow:0 1px 4px rgba(0,0,0,.7)}
+
+.catalog-shell{padding:26px}
+.tabs{display:flex;gap:8px;overflow:auto;padding-bottom:12px;margin-bottom:22px;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;display:inline-flex;align-items:center;gap:6px;
+border:1px solid var(--line);background:rgba(255,255,255,.05);color:var(--muted);
+padding:10px 15px;border-radius:999px;cursor:pointer;font-size:.82rem;
+font-weight:800;transition:.25s ease;white-space:nowrap;backdrop-filter:blur(8px)}
+.tab svg{width:12px;height:12px;opacity:.7}
+.tab:hover{color:#fff;border-color:rgba(255,31,46,.45);background:rgba(255,31,46,.12)}
+.tab.active{color:#fff;border-color:transparent;
+background:linear-gradient(90deg,var(--red-deep),var(--red));
+box-shadow:0 0 25px rgba(255,31,46,.5),0 0 10px rgba(255,31,46,.4) inset}
+.tab.active svg{opacity:1;color:#fff}
+
+.panel{display:none}
+.panel.active{display:block;animation:fadeUp .35s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+.product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.product{position:relative;overflow:hidden;padding:18px;min-height:230px;
+display:flex;flex-direction:column;border:1px solid var(--line);border-radius:18px;
+background:linear-gradient(160deg,rgba(20,20,28,.55),rgba(12,12,20,.65));
+backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);
+transition:.3s ease}
+.product::before{content:"";position:absolute;width:140px;height:140px;
+top:-70px;right:-50px;background:radial-gradient(circle,rgba(255,31,46,.30),transparent 70%);
+pointer-events:none;transition:.4s ease}
+.product:hover{transform:translateY(-5px);border-color:rgba(255,31,46,.6);
+box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 30px rgba(255,31,46,.35);
+background:linear-gradient(160deg,rgba(20,20,28,.7),rgba(12,12,20,.8))}
+.product:hover::before{transform:scale(1.4)}
+.product-top{display:flex;justify-content:space-between;gap:8px;align-items:flex-start;position:relative;z-index:1}
+.product-badge{display:inline-flex;align-items:center;gap:4px;
+font-size:.62rem;font-weight:900;letter-spacing:1px;color:#ffbcc0;
+padding:5px 9px;border-radius:8px;background:rgba(255,31,46,.18);
+border:1px solid rgba(255,31,46,.35);text-transform:uppercase}
+.product-badge svg{width:10px;height:10px;color:var(--gold)}
+.product-badge.otw{background:rgba(255,215,0,.15);border-color:rgba(255,215,0,.5);color:#ffe680}
+.product-badge.otw svg{color:var(--gold)}
+.product-brand{color:var(--dim);font-size:.68rem;font-family:var(--display);letter-spacing:1px;font-weight:700}
+.product h3{margin-top:14px;font-size:.94rem;line-height:1.35;color:#fff;
+font-family:var(--head);font-weight:700;letter-spacing:.2px;position:relative;z-index:1;text-shadow:0 1px 4px rgba(0,0,0,.8)}
+.product-desc{margin-top:8px;color:#c8c8d0;font-size:.76rem;line-height:1.5;
+position:relative;z-index:1;flex:1;text-shadow:0 1px 3px rgba(0,0,0,.8)}
+.price{margin-top:12px;display:flex;gap:8px;align-items:baseline;flex-wrap:wrap;position:relative;z-index:1}
+.old{color:var(--dim);text-decoration:line-through;font-size:.75rem;font-family:var(--display);font-weight:700}
+.mid{color:#ffbcc0;text-decoration:line-through;font-size:.82rem;font-family:var(--display);font-weight:700;opacity:.7}
+.new{font-family:var(--display);font-size:1.5rem;font-weight:900;color:#fff;
+text-shadow:0 0 15px rgba(255,31,46,.9),0 2px 6px rgba(0,0,0,.9)}
+.new-save{display:inline-block;margin-left:6px;padding:2px 8px;border-radius:6px;
+font-family:var(--head);font-size:.7rem;font-weight:900;letter-spacing:.5px;
+background:linear-gradient(90deg,rgba(255,215,0,.2),rgba(255,31,46,.15));
+border:1px solid rgba(255,215,0,.5);color:var(--gold);text-shadow:0 0 8px rgba(255,215,0,.6);text-transform:uppercase}
+.buy{margin-top:auto;width:100%;border:0;padding:11px;border-radius:11px;
+cursor:pointer;color:#fff;font-weight:900;font-family:var(--head);
+letter-spacing:1px;font-size:.85rem;display:inline-flex;align-items:center;
+justify-content:center;gap:6px;
+background:linear-gradient(90deg,var(--red-deep),var(--red));
+transition:.25s ease;position:relative;z-index:1;overflow:hidden;
+box-shadow:0 4px 15px rgba(255,31,46,.35)}
+.buy svg{width:14px;height:14px}
+.buy:hover{filter:brightness(1.15);transform:translateY(-2px);
+box-shadow:0 10px 25px rgba(255,31,46,.55),0 0 20px rgba(255,31,46,.5)}
+.buy:disabled,.buy.coming-soon{background:linear-gradient(90deg,#2a2a30,#3a3a42);
+color:var(--dim);cursor:not-allowed;box-shadow:none}
+.buy:disabled:hover,.buy.coming-soon:hover{transform:none;filter:none}
+
+.promo-banner{margin-bottom:16px;padding:14px 18px;border-radius:14px;
+display:flex;align-items:center;gap:12px;
+border:1px dashed rgba(255,215,0,.6);
+background:linear-gradient(90deg,rgba(255,215,0,.12),rgba(255,31,46,.05));
+backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+box-shadow:0 0 25px rgba(255,215,0,.2) inset}
+.promo-banner svg{width:24px;height:24px;color:var(--gold);filter:drop-shadow(0 0 8px var(--gold))}
+.promo-banner .txt{font-family:var(--head);font-weight:700;font-size:.95rem;letter-spacing:.5px;color:#ffe680}
+.promo-banner .txt b{color:#fff}
+
+.info-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:12px}
+.info-card{padding:26px}
+.info-card h3{font-family:var(--display);font-size:1.35rem;margin-bottom:14px;
+color:#fff;font-weight:800;letter-spacing:.5px;display:flex;align-items:center;gap:10px;text-shadow:0 1px 6px rgba(0,0,0,.8)}
+.info-card h3 svg{width:20px;height:20px;color:var(--red-2)}
+.info-card p,.info-card li{color:#d0d0d8;font-size:.9rem;line-height:1.65;text-shadow:0 1px 3px rgba(0,0,0,.8)}
+.info-card ol{padding-left:20px;margin-top:12px}
+.info-card li{margin-bottom:10px}
+.info-card strong{color:#fff}
+.channel-list{display:grid;gap:10px;margin-top:16px}
+.channel{display:flex;align-items:center;justify-content:space-between;gap:12px;
+padding:13px 14px;border:1px solid var(--line);border-radius:13px;
+background:rgba(255,255,255,.06);backdrop-filter:blur(8px);transition:.25s ease}
+.channel:hover{border-color:rgba(255,31,46,.5);background:rgba(255,31,46,.1);transform:translateX(4px)}
+.channel small{color:var(--red-2);font-weight:800;font-size:.72rem;letter-spacing:.5px}
+.channel b{color:#fff;font-family:var(--head);letter-spacing:.3px}
+.channel-arrow{color:var(--red);display:inline-flex;align-items:center}
+.channel-arrow svg{width:16px;height:16px}
+
+.about{padding:30px}
+.about p{max-width:900px;color:#d0d0d8;font-size:.94rem;line-height:1.75;text-shadow:0 1px 4px rgba(0,0,0,.8)}
+.about-badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.about-badges span{display:inline-flex;align-items:center;gap:6px;
+padding:6px 12px;border-radius:8px;font-size:.75rem;font-weight:800;
+background:rgba(255,31,46,.12);border:1px solid rgba(255,31,46,.35);
+color:#ffbcc0;letter-spacing:.5px}
+.about-badges svg{width:12px;height:12px;color:var(--red)}
+
+.contact{text-align:center;padding:36px}
+.contact-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+.btn-wa{background:linear-gradient(135deg,#128c4a,#25d366);color:#04150c;
+font-weight:900;border-color:transparent;box-shadow:0 10px 30px rgba(37,211,102,.35)}
+.btn-tg{background:linear-gradient(135deg,#1c8fcc,#2aabee);color:#fff;
+font-weight:900;border-color:transparent;box-shadow:0 10px 30px rgba(42,171,238,.35)}
+.btn-wa:hover,.btn-tg:hover{filter:brightness(1.1);transform:translateY(-2px)}
+
+footer{padding:30px 0 45px;text-align:center;color:var(--dim);font-size:.78rem;text-shadow:0 1px 4px rgba(0,0,0,.8)}
+footer span{color:var(--red);font-weight:800}
+
+.modal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;
+padding:18px;background:rgba(0,0,0,.75);backdrop-filter:blur(14px)}
+.modal.open{display:flex;animation:fadeIn .25s ease}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+.modal-box{width:min(560px,100%);max-height:90vh;overflow:auto;padding:26px;
+border:1px solid rgba(255,31,46,.35);border-radius:22px;background:rgba(8,8,12,.85);
+backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
+box-shadow:0 35px 100px rgba(0,0,0,.7),0 0 60px rgba(255,31,46,.25);
+animation:fadeUp .35s ease}
+.modal-head{display:flex;align-items:flex-start;justify-content:space-between;gap:15px;margin-bottom:8px}
+.modal-title{font-family:var(--display);font-size:1.5rem;line-height:1.1;
+color:#fff;font-weight:800;letter-spacing:.5px;display:flex;align-items:center;gap:10px}
+.modal-title svg{width:22px;height:22px;color:var(--red)}
+.close{width:38px;height:38px;border-radius:11px;flex:0 0 auto;
+display:grid;place-items:center;border:1px solid var(--line);
+background:rgba(255,255,255,.04);color:var(--text);cursor:pointer;transition:.2s}
+.close svg{width:16px;height:16px}
+.close:hover{background:rgba(255,31,46,.15);border-color:rgba(255,31,46,.5);color:#fff}
+.modal-body{padding-top:12px}
+.modal-body p,.modal-body li{color:#c8c8d0;font-size:.9rem;line-height:1.7}
+.modal-body ol{padding-left:20px;margin-top:12px}
+.modal-body li{margin-bottom:12px}
+.modal-body b{color:#fff}
+.modal-note{margin-top:16px;padding:12px;border-radius:10px;
+background:rgba(255,31,46,.08);border:1px solid rgba(255,31,46,.25);
+color:#ffbcc0;font-size:.8rem;line-height:1.6;display:flex;gap:8px;align-items:flex-start}
+.modal-note svg{width:16px;height:16px;flex:0 0 auto;color:var(--red);margin-top:2px}
+
+@media (max-width:900px){
+.product-grid{grid-template-columns:repeat(2,1fr)}
+.info-grid{grid-template-columns:1fr}
+.features{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:640px){
+.topbar{top:8px;margin-top:8px;padding:8px 10px}
+.brand-name{font-size:.85rem}
+.brand-name small{font-size:.55rem}
+.nav-btn{padding:7px 10px;font-size:.75rem}
+.nav-btn span{display:none}
+.hero{padding-top:70px}
+.hero-logo{width:70%}
+.feature{padding:16px;min-height:120px}
+.catalog-shell,.info-card,.about,.contact{padding:18px}
+.modal-box{padding:20px}
+}
+@media (max-width:480px){
+.container{width:min(100% - 20px,1200px)}
+.product-grid,.features{grid-template-columns:1fr}
+.hero h1{font-size:2rem}
+}
+</style>
+</head>
+<body>
+
+<video id="video-bg" autoplay muted loop playsinline preload="auto" aria-hidden="true">
+<source src="https://files.catbox.moe/8ue33q.mp4" type="video/mp4">
+</video>
+<div class="video-shade"></div>
+<div class="video-noise"></div>
+
+<audio id="bgm" loop muted preload="auto">
+<source src="https://files.catbox.moe/clm6bz.mp3" type="audio/mpeg">
+</audio>
+
+<button id="unmute-btn" class="unmute-btn" type="button" aria-label="Toggle sound" title="Nyalain / matiin suara">
+<svg class="icon-off" viewBox="0 0 24 24" aria-hidden="true">
+<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="none" stroke="currentColor"/>
+<line x1="23" y1="9" x2="17" y2="15"/>
+<line x1="17" y1="9" x2="23" y2="15"/>
+</svg>
+<svg class="icon-on" viewBox="0 0 24 24" aria-hidden="true">
+<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="none" stroke="currentColor"/>
+<path d="M15.54 8.46a5 5 0 0 1 0 7.07" fill="none" stroke="currentColor"/>
+<path d="M19.07 4.93a10 10 0 0 1 0 14.14" fill="none" stroke="currentColor"/>
+</svg>
+</button>
+
+<div class="lightning-bg" aria-hidden="true">
+<svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+<path d="M 80 100 L 130 200 L 100 210 L 170 320 L 140 330 L 230 450"/>
+<path d="M 900 150 L 850 260 L 880 270 L 800 400 L 840 410 L 750 540"/>
+<path d="M 500 0 L 480 120 L 520 130 L 470 280 L 510 290 L 450 460"/>
+</svg>
+</div>
+
+<nav class="topbar">
+<a class="brand" href="#home">
+<div class="brand-mark"><img src="https://files.catbox.moe/a502tu.png" alt="PRX! P4RRCH H-STx!"></div>
+<div class="brand-name">PRX! P4RRCH H-STx!<small>DISCOUNT STORE</small></div>
+</a>
+<div class="nav-actions">
+<button class="nav-btn" id="open-info" type="button">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+<span>Apa Itu File?</span>
+</button>
+<a class="nav-btn" href="#catalog">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+<span>Katalog</span>
+</a>
+<a class="nav-btn" href="#information">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+<span>Info</span>
+</a>
+<a class="nav-btn" href="#contact">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+<span>Order</span>
+</a>
+</div>
+</nav>
+
+<header class="hero" id="home">
+<div class="container hero-inner">
+<div class="eyebrow">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+Discount Edition
+</div>
+<img class="hero-logo" src="https://files.catbox.moe/a502tu.png" alt="PRX! P4RRCH H-STx!">
+<h1>PRICELIST <span>DISCOUNT</span></h1>
+<div class="hero-tag">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+Ready Semua Kebutuhan Aim Mu Bray
+</div>
+<p>FILE GACOR · MODULE GACOR · SET ANDRO GACOR</p>
+<div class="discount-banner">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+ALL PRODUK PARRCH <b>1-7K AN AJA</b>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+</div>
+<div class="hero-actions">
+<a class="cta primary" href="#catalog">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+Lihat Produk
+</a>
+<button class="cta secondary" id="open-info-hero" type="button">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+Penjelasan File
+</button>
+</div>
+</div>
+</header>
+
+<section class="section" style="padding-top:0;">
+<div class="container">
+<div class="features">
+<div class="feature glass"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="13" y2="17"/></svg></div><div><h3>File Modifikasi</h3><p>Modifikasi asset & config untuk performa maksimal.</p></div></div>
+<div class="feature glass"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div><div><h3>Headshot Support</h3><p>Optimasi drag & aim untuk mempermudah headshot.</p></div></div>
+<div class="feature glass"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></div><div><h3>Boost Performa</h3><p>Optimasi FPS, RAM, dan thermal perangkat.</p></div></div>
+<div class="feature glass"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div><div><h3>Set Android</h3><p>Preset Android pribadi & ala seleb untuk gaming.</p></div></div>
+<div class="feature glass"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg></div><div><h3>Harga Discount</h3><p>Semua produk 1-7K an — harga promo terbatas.</p></div></div>
+<div class="feature glass"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><div><h3>Order Cepat</h3><p>Tekan Beli → langsung chat WhatsApp admin.</p></div></div>
+</div>
+</div>
+</section>
+
+<section class="section" id="catalog">
+<div class="container">
+<div class="section-head">
+<div class="section-kicker">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+Discount Products
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+</div>
+<h2 class="section-title">Katalog Discount</h2>
+<p class="section-sub">Pilih kategori → pilih produk → tekan <b>Beli</b>.</p>
+</div>
+<div class="glass catalog-shell">
+<div class="tabs" id="tabs"></div>
+<div id="panels"></div>
+</div>
+</div>
+</section>
+
+<section class="section" id="information">
+<div class="container">
+<div class="section-head">
+<div class="section-kicker">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+Info Center
+</div>
+<h2 class="section-title">Informasi & Channel</h2>
+<p class="section-sub">Semua update & testimoni tersedia di channel resmi</p>
+</div>
+<div class="info-grid">
+<article class="glass info-card">
+<h3>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+Apa Itu File?
+</h3>
+<p>Semua produk <strong>PRX! P4RRCH H-STx!</strong> adalah <strong>file modifikasi</strong> yang dirancang untuk mengoptimalkan performa perangkat & game tanpa mengubah data inti secara permanen.</p>
+<ol>
+<li><strong>Cara Kerja</strong><br>Menyesuaikan parameter sistem (touch response, render, thermal, network) dan memodifikasi konfigurasi game (drag, aim response, asset bundle).</li>
+<li><strong>Module</strong><br>Tweak performa, headlock, aimlock, crosshair, drag, dan boost FPS.</li>
+<li><strong>Set Android</strong><br>Setelan pribadi P4RRCH & preset seleb — system tweak untuk gaming.</li>
+<li><strong>File AIMHSx!</strong><br>Kontrol drag, optimasi drag, dan mempermudah headshot.</li>
+<li><strong>Stabilizer</strong><br>Paket performa + stabilizer untuk FPS & jaringan.</li>
+</ol>
+</article>
+<aside class="glass info-card">
+<h3>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+Channel WhatsApp
+</h3>
+<p>Update, testimoni & info terbaru dari <strong>PRX! P4RRCH H-STx!</strong></p>
+<div class="channel-list">
+<a class="channel" href="https://whatsapp.com/channel/0029Vb7vtz16xCSXAsj3Ov45" target="_blank" rel="noopener">
+<div><b>Channel Utama</b><br><small>WhatsApp Channel</small></div>
+<span class="channel-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+</a>
+<a class="channel" href="https://whatsapp.com/channel/0029Vb8G1Gl4inoyNsYjTV0p" target="_blank" rel="noopener">
+<div><b>Testimoni Aim</b><br><small>WhatsApp Channel</small></div>
+<span class="channel-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+</a>
+<a class="channel" href="https://whatsapp.com/channel/0029Vb8bGKgG3R3p9qsiVw1v" target="_blank" rel="noopener">
+<div><b>All Testi Buyer</b><br><small>WhatsApp Channel</small></div>
+<span class="channel-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+</a>
+</div>
+</aside>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+<div class="glass about">
+<div class="section-kicker">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+About
+</div>
+<h2 class="section-title" style="margin-top:6px;">Tentang PRX! P4RRCH H-STx!</h2>
+<p style="margin-top:14px;"><b>PRX! P4RRCH H-STx!</b> adalah penyedia module, setelan Android, dan file modifikasi untuk meningkatkan performa gaming & mempermudah headshot. Semua produk dikembangkan langsung dan sudah digunakan banyak player. Order mudah via WhatsApp atau Telegram.</p>
+<div class="about-badges">
+<span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Trustworthy</span>
+<span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Reliable</span>
+<span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Honest</span>
+<span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Fast Response</span>
+<span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Digital Product</span>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section" id="contact" style="padding-top:0;">
+<div class="container">
+<div class="glass contact">
+<div class="section-kicker">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+Order Center
+</div>
+<h2 class="section-title" style="margin-top:6px;">Mau Order?</h2>
+<p class="section-sub">Pilih produk dari katalog → tekan <b>Beli</b> → langsung chat WhatsApp admin.</p>
+<div class="contact-actions">
+<a class="cta btn-wa" href="https://wa.me/6282364509575?text=Bro%2C%20order%20nih%0A%0ALangsung%20gas%20ya%20bro" target="_blank" rel="noopener">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+WhatsApp Order
+</a>
+<a class="cta btn-tg" href="https://t.me/parrchset_andro_module" target="_blank" rel="noopener">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+Telegram
+</a>
+</div>
+</div>
+</div>
+</section>
+
+<footer>
+© <span>PRX! P4RRCH H-STx!</span> — Discount Store
+</footer>
+
+<div class="modal" id="info-modal" role="dialog" aria-modal="true">
+<div class="modal-box">
+<div class="modal-head">
+<div class="modal-title">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+Apa Itu File?
+</div>
+<button class="close" id="info-close" type="button" aria-label="Tutup">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+</button>
+</div>
+<div class="modal-body">
+<p>Semua produk <b>PRX! P4RRCH H-STx!</b> adalah <b>file modifikasi</b> yang dirancang untuk mengoptimalkan performa perangkat & game tanpa mengubah data inti secara permanen.</p>
+<ol>
+<li><b>Module</b><br>File tweak performa — headlock, aimlock, crosshair lock, easy drag, dan boost FPS.</li>
+<li><b>Set Android</b><br>Setelan sistem Android pribadi P4RRCH & preset ala seleb untuk gaming.</li>
+<li><b>File AIMHSx!</b><br>File modifikasi untuk kontrol drag, optimasi drag, dan mempermudah headshot.</li>
+<li><b>Stabilizer × MegaBundles</b><br>Paket lengkap: stabilizer performa + Data HS / Easy Drag / File Build.</li>
+</ol>
+<p class="modal-note">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+<span>Hasil dapat berbeda tergantung perangkat, versi game, dan konfigurasi yang digunakan. Gunakan sesuai ketentuan yang berlaku.</span>
+</p>
+</div>
+</div>
+</div>
+
+<script>
+const ICONS = {
+bolt:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>',
+tag:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>',
+star:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>',
+phone:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>',
+file:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>',
+shield:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>',
+warn:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>'
+};
+
+// Produk diskon — harga: normal, mid(diskon1), new(diskon2 final), save%
+const products = [
+// PCHX
+{cat:'pchx', name:'PCHX DEX', old:'2K', mid:'1K', new:'500', save:'75%', desc:'Entry-level. Aim sensitivity licin, no ghost touch.'},
+{cat:'pchx', name:'PCHX RVX', old:'4K', mid:'3K', new:'2.7K', save:'32%', desc:'Aimlock, headlock, drag HS extreme, FPS 144Hz.'},
+{cat:'pchx', name:'PCHX RVYTERX V2', old:'5K', mid:'4K', new:'3K', save:'40%', desc:'Headlock 100%, data HS, drag HS extreme.'},
+{cat:'pchx', name:'PCHX RVYTERX V3', old:'6K', mid:'5K', new:'3.7K', save:'38%', desc:'Cyber Matrix Protocol. Deep data injection.'},
+{cat:'pchx', name:'PCHX VIP', old:'7K', mid:'5K', new:'4K', save:'43%', desc:'Android Manifest Injection, headlock 100%, 144FPS.'},
+{cat:'pchx', name:'PCHX VVVIP', old:'8K', mid:'6K', new:'4.5K', save:'44%', desc:'Auto-head 105%, hitbox expansion 365.'},
+{cat:'pchx', name:'PCHX GOODSEX', old:'9K', mid:'5K', new:'4K', save:'56%', desc:'Global system tuning & universal injector.'},
+{cat:'pchx', name:'PCHX GOODSEX SUPHIGH', old:'10K', mid:'6K', new:'5K', save:'50%', desc:'Versi SUPHIGH, headlock extreme, super stable FPS.'},
+{cat:'pchx', name:'PCHX BRUTAL TRUMONZ', old:'7K', mid:'5K', new:'4K', save:'43%', desc:'Pointer speed 11, crosshair tracking head.'},
+// FARTX
+{cat:'fartx', name:'FARTX BSC', old:'4K', mid:'3K', new:'2.7K', save:'32%', desc:'Headlock 100% & crosshair radar.'},
+{cat:'fartx', name:'FARTX MEDIUMX', old:'5K', mid:'4K', new:'3K', save:'40%', desc:'Headlock 80%, aixlock FOV 140%.'},
+{cat:'fartx', name:'FARTX HARDX', old:'6K', mid:'5K', new:'3.7K', save:'38%', desc:'Aixlock FOV 220%, Sata HS 999.9%.'},
+{cat:'fartx', name:'FARTX HATRICX', old:'8K', mid:'6K', new:'4.5K', save:'44%', desc:'Aixlock FOV 360%, hitbox 1200%.'},
+{cat:'fartx', name:'FARTX OPSYXTER', old:'10K', mid:'7K', new:'5K', save:'50%', desc:'120FPS locked, GPU render optimizer.'},
+// PRIB
+{cat:'prib', name:'SET ANDRO PRIB BASIC', old:'2K', mid:'1K', new:'1K', save:'50%', desc:'Kalibrasi display & touch dasar.'},
+{cat:'prib', name:'SET ANDRO PRIB V1', old:'3K', mid:'2K', new:'2K', save:'33%', desc:'Tuning touch response & display.'},
+{cat:'prib', name:'SET ANDRO PRIB + MODULE PARRCH', old:'30K', mid:'5K', new:'3K', save:'83%', desc:'Paket set Android prib + module PARRCH.'},
+{cat:'prib', name:'SET ANDRO PRIB + NYWTERx!', old:'20K', mid:'8K', new:'4K', save:'—', coming:true, desc:'Paket set Android + module NYWTERx! Segera hadir!'},
+{cat:'prib', name:'SET ANDRO PRIB + CHUTDOx!', old:'40K', mid:'10K', new:'8K', save:'—', coming:true, desc:'Paket set Android + module CHUTDOx! Segera hadir!'},
+// SELEB
+{cat:'seleb', name:'SET ANDRO JAPAR', old:'2K', mid:'1K', new:'1K', save:'50%', desc:'Set Android seleb tuning touch & aim.'},
+{cat:'seleb', name:'SET ANDRO KAMIEL', old:'2K', mid:'1K', new:'1K', save:'50%', desc:'Set Android seleb tuning touch & aim.'},
+{cat:'seleb', name:'SET ANDRO RENDERZ', old:'2K', mid:'1K', new:'1K', save:'50%', desc:'Set Android seleb tuning touch & aim.'},
+{cat:'seleb', name:'SET ANDRO FLADO', old:'2K', mid:'1K', new:'1K', save:'50%', desc:'Set Android seleb tuning touch & aim.'},
+{cat:'seleb', name:'SET ANDRO AVAI', old:'2K', mid:'1K', new:'1K', save:'50%', desc:'Set Android seleb tuning touch & aim.'},
+{cat:'seleb', name:'SET ANDRO RAFAIZ', old:'2K', mid:'1K', new:'1K', save:'50%', desc:'Set Android seleb tuning touch & aim.'},
+{cat:'seleb', name:'SET ANDRO AMAY', old:'2K', mid:'1K', new:'1K', save:'50%', desc:'Set Android seleb tuning touch & aim.'},
+{cat:'seleb', name:'SET ANDRO ROBO', old:'2K', mid:'1K', new:'1K', save:'50%', desc:'Set Android seleb tuning touch & aim.'},
+{cat:'seleb', name:'SET ANDRO NEPTUNUS', old:'2K', mid:'1K', new:'1K', save:'50%', desc:'Set Android seleb tuning touch & aim.'},
+{cat:'seleb', name:'SET ANDRO NOXXA', old:'2K', mid:'1K', new:'1K', save:'50%', desc:'Set Android seleb tuning touch & aim.'},
+{cat:'seleb', name:'SET ANDRO CAMAT', old:'2K', mid:'1K', new:'1K', save:'50%', desc:'Set Android seleb tuning touch & aim.'},
+{cat:'seleb', name:'SET ANDRO RAXZY', old:'2K', mid:'1K', new:'1K', save:'50%', desc:'Set Android seleb tuning touch & aim.'},
+{cat:'seleb', name:'SET ANDRO ZAMRI', old:'2K', mid:'1K', new:'1K', save:'50%', desc:'Set Android seleb tuning touch & aim.'},
+{cat:'seleb', name:'SET ANDRO KEYZA', old:'2K', mid:'1K', new:'1K', save:'50%', desc:'Set Android seleb tuning touch & aim.'},
+{cat:'seleb', name:'SET ANDRO ALZ', old:'2K', mid:'1K', new:'1K', save:'50%', desc:'Set Android seleb tuning touch & aim.'},
+// AIMHSx!
+{cat:'aimhs', name:'AIMHSx! 64%', old:'20K', mid:'5K', new:'2K', save:'90%', desc:'Tier pemula. Touch responsive & aim stability.'},
+{cat:'aimhs', name:'AIMHSx! 86%', old:'55K', mid:'8K', new:'4K', save:'93%', desc:'Tier menengah. Auto headshot alignment.'},
+{cat:'aimhs', name:'AIMHSx! 100%', old:'87K', mid:'12K', new:'6K', save:'93%', desc:'Tier tertinggi. Auto headshot 100%.'},
+// STABILIZER
+{cat:'stab', name:'STABILIZER + FILE BUILD', old:'25K', mid:'10K', new:'4K', save:'84%', desc:'File Build 25-40%, Game Low-Grade Mode.'},
+{cat:'stab', name:'STABILIZER + EASY DRAG', old:'48K', mid:'15K', new:'6K', save:'87%', desc:'Easy Drag 50-65%, 33 fitur HP.'},
+{cat:'stab', name:'STABILIZER + DATA HS', old:'65K', mid:'20K', new:'10K', save:'85%', desc:'Data HS 85-99%, aimlock & headlock.'}
+];
+
+const categories = [
+{key:'seleb', label:'SET ANDRO SELEB', icon:ICONS.star},
+{key:'prib', label:'SET ANDRO PRIB', icon:ICONS.phone},
+{key:'pchx', label:'MODULE PCHX', icon:ICONS.bolt},
+{key:'fartx', label:'MODULE FARTX', icon:ICONS.bolt},
+{key:'stab', label:'STABILIZER × MEGABUNDLES', icon:ICONS.shield},
+{key:'aimhs', label:'FILE AIMHSx!', icon:ICONS.file}
+];
+
+const WA_NUMBER = '6282364509575';
+const tabsEl = document.getElementById('tabs');
+const panelsEl = document.getElementById('panels');
+const infoModal = document.getElementById('info-modal');
+
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));}
+
+function createCard(p){
+  const badgeClass = p.coming ? 'product-badge otw' : 'product-badge';
+  const badgeIcon = p.coming ? ICONS.warn : ICONS.tag;
+  const badgeText = p.coming ? 'SEGERA HADIR' : `SAVE ${p.save}`;
+  const coming = p.coming 
+    ? `<button class="buy coming-soon" type="button" disabled>SEGERA HADIR</button>`
+    : `<button class="buy" type="button" data-product="${esc(p.name)}" data-price="${esc(p.new)}">${ICONS.bolt}Beli Produk</button>`;
+  
+  const priceHTML = p.coming
+    ? `<span class="old">${esc(p.old)}</span><span class="mid">${esc(p.mid)}</span><span class="new">${esc(p.new)}</span>`
+    : `<span class="old">${esc(p.old)}</span><span class="mid">${esc(p.mid)}</span><span class="new">${esc(p.new)}</span><span class="new-save">${esc(p.save)}</span>`;
+  
+  return `<article class="product"><div class="product-top"><span class="${badgeClass}">${badgeIcon}${badgeText}</span><span class="product-brand">PRX!</span></div><h3>${esc(p.name)}</h3><p class="product-desc">${esc(p.desc)}</p><div class="price">${priceHTML}</div>${coming}</article>`;
+}
+
+function render(){
+  tabsEl.innerHTML = categories.map((c,i)=>{
+    const count = products.filter(p=>p.cat===c.key).length;
+    return `<button class="tab${i===0?' active':''}" type="button" data-cat="${c.key}">${c.icon}${c.label} (${count})</button>`;
+  }).join('');
+  panelsEl.innerHTML = categories.map((c,i)=>{
+    const items = products.filter(p=>p.cat===c.key);
+    const promo = c.key==='seleb' ? `<div class="promo-banner">${ICONS.tag}<div class="txt">PROMO: Buy <b>3 Set Andro Seleb</b> — GRATIS <b>1 Set Andro Seleb</b> (bebas pilih)</div></div>` : '';
+    return `<div class="panel${i===0?' active':''}" data-panel="${c.key}">${promo}<div style="margin-bottom:16px;color:var(--muted);font-size:.82rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;text-shadow:0 1px 3px rgba(0,0,0,.8)">${c.label}</div><div class="product-grid">${items.map(createCard).join('')}</div></div>`;
+  }).join('');
+}
+
+function buyNow(product, price){
+  const msg = `Bro, order nih\n\n${product} — ${price}\n\nLangsung gas ya bro`;
+  const waUrl = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
+  window.open(waUrl, '_blank');
+}
+function openInfo(){infoModal.classList.add('open');}
+function closeInfo(){infoModal.classList.remove('open');}
+
+tabsEl.addEventListener('click', e=>{
+  const btn = e.target.closest('.tab');if(!btn) return;
+  const cat = btn.dataset.cat;
+  tabsEl.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x===btn));
+  panelsEl.querySelectorAll('.panel').forEach(x=>x.classList.toggle('active',x.dataset.panel===cat));
+});
+document.addEventListener('click', e=>{
+  const buy = e.target.closest('.buy');
+  if(buy && !buy.disabled){e.preventDefault();buyNow(buy.dataset.product, buy.dataset.price);}
+});
+document.getElementById('open-info').addEventListener('click', openInfo);
+document.getElementById('open-info-hero').addEventListener('click', openInfo);
+document.getElementById('info-close').addEventListener('click', closeInfo);
+infoModal.addEventListener('click', e=>{ if(e.target===infoModal) closeInfo(); });
+document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeInfo(); });
+
+const bgVideo = document.getElementById('video-bg');
+if(bgVideo){ bgVideo.play().catch(()=>{}); }
+
+const bgm = document.getElementById('bgm');
+const unmuteBtn = document.getElementById('unmute-btn');
+let audioStarted = false;
+unmuteBtn.addEventListener('click', () => {
+  const willUnmute = bgm.muted;
+  bgm.muted = !willUnmute;
+  if (bgVideo) bgVideo.muted = true;
+  if (willUnmute && !audioStarted) {
+    bgm.play().then(()=>{audioStarted = true;}).catch(()=>{
+      bgm.muted = true;
+    });
+  } else if (willUnmute) { bgm.play().catch(()=>{}); }
+  unmuteBtn.classList.toggle('playing', !bgm.muted);
+});
+
+['selectstart','mousedown','mouseup','contextmenu','dragstart','copy','cut'].forEach(evt=>{
+  document.addEventListener(evt, e=>{
+    const t = e.target;
+    if(t && (t.tagName==='INPUT'||t.tagName==='TEXTAREA'||t.tagName==='SELECT')) return;
+    e.preventDefault(); return false;
+  }, false);
+});
+document.addEventListener('touchstart', e=>{
+  const t = e.target;
+  if(t && (t.tagName==='INPUT'||t.tagName==='TEXTAREA'||t.tagName==='SELECT')) return;
+  e.stopPropagation();
+}, { passive: false });
+
+render();
+</script>
+</body>
+</html>
