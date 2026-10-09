@@ -45,39 +45,24 @@ svg{flex:0 0 auto}
 --body:'Inter','MADEEvolveEvo',sans-serif;
 }
 
-/* ===== VIDEO BACKGROUND — FIXED, GPU ACCELERATED, SMOOTH 60-120FPS ===== */
+/* ===== VIDEO BACKGROUND — FIXED, GPU ACCELERATED ===== */
 #video-bg{
-  position:fixed;
-  top:0;left:0;
-  width:100vw;
-  height:100vh;
-  object-fit:cover;
-  object-position:center center;
-  z-index:-5;
-  background:#050508;
-  opacity:1;
-  pointer-events:none;
-  transform:translateZ(0);
-  -webkit-transform:translateZ(0);
-  will-change:transform;
-  backface-visibility:hidden;
-  -webkit-backface-visibility:hidden;
-  transform-style:preserve-3d;
-  contain:layout style paint;
-  content-visibility:auto;
+  position:fixed;top:0;left:0;width:100vw;height:100vh;
+  object-fit:cover;object-position:center center;
+  z-index:-5;background:#050508;opacity:1;pointer-events:none;
+  transform:translateZ(0);-webkit-transform:translateZ(0);
+  will-change:transform;backface-visibility:hidden;-webkit-backface-visibility:hidden;
 }
 .video-shade{
   position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:-4;pointer-events:none;
   background:radial-gradient(circle at 50% 15%,rgba(255,31,46,.10),transparent 50%),
   linear-gradient(180deg,rgba(5,5,8,.20),rgba(5,5,8,.45) 55%,rgba(5,5,8,.70));
-  transform:translateZ(0);
-  will-change:transform;
+  transform:translateZ(0);will-change:transform;
 }
 .video-noise{
   position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:-3;pointer-events:none;opacity:.04;
   background-image:radial-gradient(rgba(255,255,255,.8) .6px,transparent .6px);background-size:5px 5px;
-  transform:translateZ(0);
-  will-change:transform;
+  transform:translateZ(0);will-change:transform;
 }
 
 .lightning-bg{position:fixed;inset:0;z-index:-2;pointer-events:none;opacity:.15;transform:translateZ(0)}
@@ -115,7 +100,6 @@ svg{flex:0 0 auto}
   animation:onlinePulse 1.6s ease-out infinite;
 }
 @keyframes onlinePulse{0%{transform:scale(.85);opacity:.9}100%{transform:scale(1.6);opacity:0}}
-}
 
 .container{width:min(1200px,calc(100% - 32px));margin:auto}
 
@@ -370,7 +354,7 @@ footer span{color:var(--red);font-weight:800;font-family:var(--display)}
 
 .modal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;
 padding:18px;background:rgba(0,0,0,.75);backdrop-filter:blur(14px)}
-<div class="brand-name">PRX! P4RRCH H-STx!<small>DISCOUNT STORE</small><span class="online-badge"><span class="online-dot"></span><span>WEB ONLINE 24/7</span></span></div>
+.modal.open{display:flex;animation:fadeIn .25s ease}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 .modal-box{width:min(560px,100%);max-height:90vh;overflow:auto;padding:26px;
 border:1px solid rgba(255,31,46,.35);border-radius:22px;background:rgba(8,8,12,.85);
@@ -422,45 +406,16 @@ color:#ffbcc0;font-size:.8rem;line-height:1.6;display:flex;gap:8px;align-items:f
 /* ============================================
    PERFORMANCE BOOST — 60-120FPS OPTIMIZATION
    ============================================ */
-/* GPU accel buat semua elemen animasi */
-.brand-mark,
-.unmute-btn,
-.eyebrow,
-.hero-logo,
-.hero h1,
-.hero h1 span,
-.hero-tag,
-.discount-banner,
-.cta,
-.glass,
-.tab,
-.product,
-.buy,
-.promo-banner,
-.info-card,
-.channel,
-.about,
-.contact,
-.modal-box,
-.nav-btn{
-  transform:translateZ(0);
-  -webkit-transform:translateZ(0);
-  backface-visibility:hidden;
-  -webkit-backface-visibility:hidden;
+.brand-mark,.unmute-btn,.eyebrow,.hero-logo,.hero h1,.hero h1 span,.hero-tag,
+.discount-banner,.cta,.glass,.tab,.product,.buy,.promo-banner,.info-card,.channel,
+.about,.contact,.modal-box,.nav-btn{
+  transform:translateZ(0);-webkit-transform:translateZ(0);
+  backface-visibility:hidden;-webkit-backface-visibility:hidden;
 }
-
-/* Isolasi stacking context biar scroll gak repaint video */
-#video-bg,.video-shade,.video-noise,.lightning-bg{
-  contain:layout style;
-}
-.video-shade{contain:strict}
-.lightning-bg{contain:strict}
-
-/* Smooth scrolling pakai GPU */
+#video-bg,.video-shade,.video-noise,.lightning-bg{contain:layout style}
+.video-shade,.lightning-bg{contain:strict}
 html{scroll-behavior:smooth;-webkit-overflow-scrolling:touch}
 body{overscroll-behavior-y:contain}
-
-/* Di HP: reduce blur biar 60fps stabil */
 @media (max-width:768px){
   .glass,.topbar,.product,.info-card,.modal-box{
     backdrop-filter:blur(10px) saturate(120%)!important;
@@ -470,23 +425,17 @@ body{overscroll-behavior-y:contain}
     backdrop-filter:blur(6px)!important;
     -webkit-backdrop-filter:blur(6px)!important;
   }
-  /* Matiin animasi berat di HP */
   .hero-logo{animation:none}
   .brand-mark{animation:none}
   .discount-banner{animation:none}
-  /* Video tetep jalan tapi gak berat */
   #video-bg{will-change:auto}
 }
-
-/* Pas user scroll, matiin animasi yang gak perlu biar fokus ke konten */
 body.scrolling .hero-logo,
 body.scrolling .brand-mark,
 body.scrolling .discount-banner,
 body.scrolling .online-dot::after{
   animation-play-state:paused;
 }
-
-/* Reduce motion buat user yang sensitif */
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{
     animation-duration:.01ms!important;
@@ -499,7 +448,7 @@ body.scrolling .online-dot::after{
 </head>
 <body>
 
-<video id="video-bg" autoplay muted loop playsinline preload="auto" disablepictureinpicture aria-hidden="true">
+<video id="video-bg" autoplay muted loop playsinline preload="auto" aria-hidden="true">
 <source src="https://files.catbox.moe/8ue33q.mp4" type="video/mp4">
 </video>
 <div class="video-shade"></div>
@@ -533,7 +482,7 @@ body.scrolling .online-dot::after{
 <nav class="topbar">
 <a class="brand" href="#home">
 <div class="brand-mark"><img src="https://files.catbox.moe/a502tu.png" alt="PRX! P4RRCH H-STx!"></div>
-<div class="brand-name">PRX! P4RRCH H-STx!<small>DISCOUNT STORE</small><span class="online-badge"><span class="online-dot"></span><span>ONLINE</span></span></div>
+<div class="brand-name">PRX! P4RRCH H-STx!<small>DISCOUNT STORE</small><span class="online-badge"><span class="online-dot"></span><span>WEB ONLINE 24/7</span></span></div>
 </a>
 <div class="nav-actions">
 <button class="nav-btn" id="open-info" type="button">
@@ -863,14 +812,8 @@ infoModal.addEventListener('click', e=>{ if(e.target===infoModal) closeInfo(); }
 document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeInfo(); });
 
 const bgVideo = document.getElementById('video-bg');
-if(bgVideo){ 
-  bgVideo.play().catch(()=>{});
-  bgVideo.playbackRate = 1;
-}
+if(bgVideo){ bgVideo.play().catch(()=>{}); }
 
-// ============================================
-// FPS BOOST + PAUSE ANIMASI PAS SCROLL
-// ============================================
 let scrollTimer = null;
 window.addEventListener('scroll', () => {
   document.body.classList.add('scrolling');
@@ -911,4 +854,4 @@ document.addEventListener('touchstart', e=>{
 render();
 </script>
 </body>
-  </html>
+</html>
